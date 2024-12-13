@@ -30,7 +30,10 @@ jobs:
       - name: Publish to Distributed Press
         uses: hyphacoop/actions-distributed-press@v1.1.0
         with:
-          publish_dir: public # Ensure this matches your build output directory
+          publish_dir: build
           dp_url: https://api.distributed.press
           refresh_token: ${{ secrets.DISTRIBUTED_PRESS_TOKEN }}
           site_url: p2plabs.xyz
+          deploy_http: true
+          deploy_hyper: true
+          deploy_ipfs: true
