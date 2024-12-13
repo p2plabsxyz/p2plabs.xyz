@@ -1,6 +1,4 @@
 import React from "react";
-// import firebase from "firebase/compat/app";
-// import db from "../firebase";
 import Hero from "../images/hero.png";
 import Peersky from "../images/peersky-browser.png";
 import DScan from "../images/dscan.png";
@@ -8,27 +6,6 @@ import Dhost from "../images/dhost.png";
 import NFT from "../images/1clicknft.png";
 
 function LandingPage() {
-  // Newsletter
-  // const [input, setInput] = useState("");
-  // const [subscribe, setSubscribe] = useState("");
-
-  // function inputHandler(e) {
-  //   setInput(e.target.value);
-  // }
-
-  // async function submitHandler(e) {
-  //   e.preventDefault();
-  //   if (input) {
-  //     await db.collection("emails").add({
-  //       email: input,
-  //       time: firebase.firestore.FieldValue.serverTimestamp(),
-  //     });
-  //     setSubscribe("Subscribed successfully!");
-  //     setTimeout(() => {
-  //       setSubscribe("");
-  //     }, 3690);
-  //   }
-  // }
 
   return (
     <div style={{ backgroundColor: "#FFFCF9" }}>
@@ -54,7 +31,6 @@ function LandingPage() {
               </b>
             </p>
             <div className="block justify-center">
-              {/* <form onSubmit={submitHandler}> */}
               <div className="flex xl:flex-nowrap md:flex-nowrap lg:flex-wrap flex-wrap justify-center items-end md:justify-start">
                 <div className="relative w-48 sm:w-auto xl:mr-4 lg:mr-0 sm:mr-4 mr-2">
                   <label
@@ -71,28 +47,8 @@ function LandingPage() {
                       @p2plabs.xyz:matrix.org
                     </a>
                   </label>
-                  {/* <input
-                      type="email"
-                      onChange={inputHandler}
-                      value={input}
-                      id="footer-field"
-                      placeholder="email address"
-                      name="footer-field"
-                      className="w-full bg-white bg-opacity-50 rounded border border-gray-300 focus:bg-transparent focus:ring-2 focus:ring-cyan-200 focus:border-cyan-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-                      required
-                    /> */}
                 </div>
-                {/* <button
-                    type="submit"
-                    className="lg:mt-2 xl:mt-0 flex-shrink-0 inline-flex text-white bg-cyan-400 border-0 py-2 px-4 focus:outline-none hover:bg-cyan-500 rounded"
-                  >
-                    Subscribe
-                  </button> */}
               </div>
-              {/* </form> */}
-              {/* <p className="text-sky-400 text-sm mt-2 md:text-left text-center">
-                {subscribe}
-              </p> */}
             </div>
           </div>
           <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
@@ -124,39 +80,40 @@ function LandingPage() {
           </div>
           {/* dscan */}
           <div className="flex flex-wrap -m-4">
+            {/* Peersky */}
             <div className="p-4 md:w-1/3">
-              <div className="h-full bg-white border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+              <div className="h-full bg-white border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden flex flex-col">
                 <img
                   className="lg:h-48 md:h-36 w-full object-cover object-center"
                   src={Peersky}
                   alt="Peersky Browser"
                 />
-                <div className="p-6">
+                <div className="p-6 flex flex-col flex-grow">
                   <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
                     Infrastructure
                   </h2>
                   <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
                     Peersky Browser
                   </h1>
-                  <p className="leading-relaxed mb-3">
-                    A minimal p2p web browser.
+                  <p className="leading-relaxed mb-5">
+                    A Minimal Local-First P2P Web Browser: Access, Communicate, and Publish Offline
                   </p>
-                  <br />
-                  <br />
-                  <div className="flex items-center flex-wrap">
+                  <div className="mt-auto">
                     <a
-                      className="text-sky-500 hover:text-sky-600 inline-flex items-center md:mb-2 lg:mb-0"
+                      className="text-sky-500 hover:text-sky-600 inline-flex items-center"
                       href="https://peersky.p2plabs.xyz"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       Download for desktop
                       <svg
                         className="w-4 h-4 ml-2"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
-                        stroke-width="2"
+                        strokeWidth="2"
                         fill="none"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
                       >
                         <path d="M5 12h14"></path>
                         <path d="M12 5l7 7-7 7"></path>
@@ -166,28 +123,29 @@ function LandingPage() {
                 </div>
               </div>
             </div>
-            {/* dscan */}
+
+            {/* DScan */}
             <div className="p-4 md:w-1/3">
-              <div className="h-full bg-white border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+              <div className="h-full bg-white border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden flex flex-col">
                 <img
                   className="lg:h-48 md:h-36 w-full object-cover object-center"
                   src={DScan}
                   alt="DScan"
                 />
-                <div className="p-6">
+                <div className="p-6 flex flex-col flex-grow">
                   <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
-                    Tool
+                    Publishing
                   </h2>
                   <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
                     DScan
                   </h1>
-                  <p className="leading-relaxed mb-3">
-                    A decentralized storage and file-sharing tool that uploads
-                    content to IPFS and generates decentralized QR codes.
+                  <p className="leading-relaxed mb-5">
+                    A decentralized storage and file-sharing tool that uploads content to
+                    IPFS and generates decentralized QR codes.
                   </p>
-                  <div className="flex items-center flex-wrap">
+                  <div className="mt-auto">
                     <a
-                      className="text-sky-500 hover:text-sky-600 inline-flex items-center md:mb-2 lg:mb-0"
+                      className="text-sky-500 hover:text-sky-600 inline-flex items-center"
                       href="https://chrome.google.com/webstore/detail/dscan-decentralized-qr-co/idpfgkgogjjgklefnkjdpghkifbjenap"
                       target="_blank"
                       rel="noopener noreferrer"
@@ -197,10 +155,10 @@ function LandingPage() {
                         className="w-4 h-4 ml-2"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
-                        stroke-width="2"
+                        strokeWidth="2"
                         fill="none"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
                       >
                         <path d="M5 12h14"></path>
                         <path d="M12 5l7 7-7 7"></path>
@@ -210,29 +168,28 @@ function LandingPage() {
                 </div>
               </div>
             </div>
-            {/* dhost */}
+
+            {/* DHost */}
             <div className="p-4 md:w-1/3">
-              <div className="h-full bg-white border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+              <div className="h-full bg-white border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden flex flex-col">
                 <img
                   className="lg:h-48 md:h-36 w-full object-cover object-center"
                   src={Dhost}
                   alt="Dhost"
                 />
-                <div className="p-6">
+                <div className="p-6 flex flex-col flex-grow">
                   <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
                     Dev tool
                   </h2>
                   <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
                     DHost
                   </h1>
-                  <p className="leading-relaxed mb-3">
-                    DHost is a vscode extension that publishes static websites
-                    to IPFS.
+                  <p className="leading-relaxed mb-5">
+                    DHost is a vscode extension that publishes static websites to IPFS.
                   </p>
-                  <br />
-                  <div className="flex items-center flex-wrap">
+                  <div className="mt-auto">
                     <a
-                      className="text-sky-500 hover:text-sky-600 inline-flex items-center md:mb-2 lg:mb-0"
+                      className="text-sky-500 hover:text-sky-600 inline-flex items-center"
                       href="https://marketplace.visualstudio.com/items?itemName=DHost.dhost"
                       target="_blank"
                       rel="noopener noreferrer"
@@ -242,10 +199,10 @@ function LandingPage() {
                         className="w-4 h-4 ml-2"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
-                        stroke-width="2"
+                        strokeWidth="2"
                         fill="none"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
                       >
                         <path d="M5 12h14"></path>
                         <path d="M12 5l7 7-7 7"></path>
@@ -255,28 +212,29 @@ function LandingPage() {
                 </div>
               </div>
             </div>
-            {/* 1clicknft */}
+
+            {/* 1ClickNFT */}
             <div className="p-4 md:w-1/3">
-              <div className="h-full bg-white border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+              <div className="h-full bg-white border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden flex flex-col">
                 <img
                   className="lg:h-48 md:h-36 w-full object-cover object-center"
                   src={NFT}
                   alt="1clickNFT"
                 />
-                <div className="p-6">
+                <div className="p-6 flex flex-col flex-grow">
                   <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
                     Dev tool
                   </h2>
                   <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
                     1clickNFT
                   </h1>
-                  <p className="leading-relaxed mb-3">
-                    1clickNFT allows you to instantly upload NFT data to IPFS
-                    right from VS Code by using nft.storage.
+                  <p className="leading-relaxed mb-5">
+                    1clickNFT allows you to instantly upload NFT data to IPFS right from VS
+                    Code by using nft.storage.
                   </p>
-                  <div className="flex items-center flex-wrap">
+                  <div className="mt-auto">
                     <a
-                      className="text-sky-500 hover:text-sky-600 inline-flex items-center md:mb-2 lg:mb-0"
+                      className="text-sky-500 hover:text-sky-600 inline-flex items-center"
                       href="https://marketplace.visualstudio.com/items?itemName=1clickNFT.1clicknft"
                       target="_blank"
                       rel="noopener noreferrer"
@@ -286,10 +244,10 @@ function LandingPage() {
                         className="w-4 h-4 ml-2"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
-                        stroke-width="2"
+                        strokeWidth="2"
                         fill="none"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
                       >
                         <path d="M5 12h14"></path>
                         <path d="M12 5l7 7-7 7"></path>
@@ -299,6 +257,7 @@ function LandingPage() {
                 </div>
               </div>
             </div>
+
           </div>
         </div>
       </section>
