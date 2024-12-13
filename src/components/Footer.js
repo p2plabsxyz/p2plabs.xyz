@@ -49,6 +49,26 @@ function Footer() {
                     Learn More
                   </a>
                 </li>
+                <li>
+                  <a
+                    href="ipns://p2plabs.xyz"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-600 hover:text-gray-800 text-sm"
+                  >
+                    ipns://
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="hyper://p2plabs.xyz"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-600 hover:text-gray-800 text-sm"
+                  >
+                    hyper://
+                  </a>
+                </li>
               </nav>
             </div>
           </div>
@@ -148,7 +168,7 @@ function Footer() {
                     rel="noopener noreferrer"
                   >
                     Discord.
-                  </a>                
+                  </a>
                 </label>
               </div>
             </div>
