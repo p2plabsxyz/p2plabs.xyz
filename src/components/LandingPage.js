@@ -45,6 +45,14 @@ function LandingPage() {
                       rel="noopener noreferrer"
                     >
                       @p2plabs.xyz:matrix.org
+                    </a> or connect with us on {" "}
+                    <a
+                      href="https://discord.gg/WGczhUJnBZ"
+                      className="text-gray-600 hover:text-purple-500 underline hover:no-underline"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Discord.
                     </a>
                   </label>
                 </div>
