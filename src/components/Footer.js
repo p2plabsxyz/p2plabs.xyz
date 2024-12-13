@@ -160,7 +160,7 @@ function Footer() {
             </span>
           </Link>
           <p className="text-sm text-gray-200 sm:ml-6 sm:mt-0 mt-4">
-            © 2022-2024 p2plabs.xyz, all rights reserved
+            © 2022-2025 p2plabs.xyz, all rights reserved
           </p>
           <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start"></span>
         </div>
