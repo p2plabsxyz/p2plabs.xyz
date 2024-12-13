@@ -124,7 +124,7 @@ function Footer() {
           {/* Latest Updates Section */}
           <div className="lg:w-1/4 md:w-1/2 w-full px-1 sm:px-1">
             <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
-              LATEST UPDATES & NEWS
+              Latest Updates & News
             </h2>
             <div className="flex xl:flex-nowrap md:flex-nowrap lg:flex-wrap flex-wrap justify-center items-end md:justify-start">
               <div className="relative w-48 sm:w-auto xl:mr-4 lg:mr-0 sm:mr-4 mr-2">
@@ -140,7 +140,15 @@ function Footer() {
                     rel="noopener noreferrer"
                   >
                     @p2plabs.xyz:matrix.org
-                  </a>
+                  </a> or connect with us on {" "}
+                  <a
+                    href="https://discord.gg/WGczhUJnBZ"
+                    className="text-gray-600 hover:text-purple-500 underline hover:no-underline"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Discord.
+                  </a>                
                 </label>
               </div>
             </div>
