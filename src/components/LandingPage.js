@@ -26,7 +26,7 @@ function LandingPage() {
               primarily driven by the advancements in peer-to-peer technologies
               and decentralized storage solutions.{" "}
               <b>
-                Our vision is to ensure that users can access information as
+                Our vision is to ensure that <del>users</del> owners can access information as
                 extensively as possible from anywhere in the world.
               </b>
             </p>
