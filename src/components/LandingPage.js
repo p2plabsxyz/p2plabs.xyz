@@ -1,9 +1,7 @@
 import React from "react";
 import Hero from "../images/hero.png";
 import Peersky from "../images/peersky-browser.png";
-import DScan from "../images/dscan.png";
-import Dhost from "../images/dhost.png";
-import NFT from "../images/1clicknft.png";
+import P2P from "../images/p2p-projects.png";
 
 function LandingPage() {
 
@@ -97,9 +95,6 @@ function LandingPage() {
                   alt="Peersky Browser"
                 />
                 <div className="p-6 flex flex-col flex-grow">
-                  <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
-                    Infrastructure
-                  </h2>
                   <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
                     Peersky Browser
                   </h1>
@@ -132,122 +127,29 @@ function LandingPage() {
               </div>
             </div>
 
-            {/* DScan */}
+            {/* P2P */}
             <div className="p-4 md:w-1/3">
               <div className="h-full bg-white border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden flex flex-col">
                 <img
                   className="lg:h-48 md:h-36 w-full object-cover object-center"
-                  src={DScan}
-                  alt="DScan"
+                  src={P2P}
+                  alt="P2P Projects"
                 />
                 <div className="p-6 flex flex-col flex-grow">
-                  <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
-                    Publishing
-                  </h2>
                   <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
-                    DScan
+                    P2P Projects
                   </h1>
                   <p className="leading-relaxed mb-5">
-                    A decentralized storage and file-sharing tool that uploads content to
-                    IPFS and generates decentralized QR codes.
+                    Explore our p2p open-source projects on GitHub.
                   </p>
                   <div className="mt-auto">
                     <a
                       className="text-sky-500 hover:text-sky-600 inline-flex items-center"
-                      href="https://chrome.google.com/webstore/detail/dscan-decentralized-qr-co/idpfgkgogjjgklefnkjdpghkifbjenap"
+                      href="https://github.com/orgs/p2plabsxyz/repositories"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      Chrome Web Store
-                      <svg
-                        className="w-4 h-4 ml-2"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        fill="none"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      >
-                        <path d="M5 12h14"></path>
-                        <path d="M12 5l7 7-7 7"></path>
-                      </svg>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* DHost */}
-            <div className="p-4 md:w-1/3">
-              <div className="h-full bg-white border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden flex flex-col">
-                <img
-                  className="lg:h-48 md:h-36 w-full object-cover object-center"
-                  src={Dhost}
-                  alt="Dhost"
-                />
-                <div className="p-6 flex flex-col flex-grow">
-                  <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
-                    Dev tool
-                  </h2>
-                  <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
-                    DHost
-                  </h1>
-                  <p className="leading-relaxed mb-5">
-                    DHost is a vscode extension that publishes static websites to IPFS.
-                  </p>
-                  <div className="mt-auto">
-                    <a
-                      className="text-sky-500 hover:text-sky-600 inline-flex items-center"
-                      href="https://marketplace.visualstudio.com/items?itemName=DHost.dhost"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      VSCode Marketplace
-                      <svg
-                        className="w-4 h-4 ml-2"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        fill="none"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      >
-                        <path d="M5 12h14"></path>
-                        <path d="M12 5l7 7-7 7"></path>
-                      </svg>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* 1ClickNFT */}
-            <div className="p-4 md:w-1/3">
-              <div className="h-full bg-white border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden flex flex-col">
-                <img
-                  className="lg:h-48 md:h-36 w-full object-cover object-center"
-                  src={NFT}
-                  alt="1clickNFT"
-                />
-                <div className="p-6 flex flex-col flex-grow">
-                  <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
-                    Dev tool
-                  </h2>
-                  <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
-                    1clickNFT
-                  </h1>
-                  <p className="leading-relaxed mb-5">
-                    1clickNFT allows you to instantly upload NFT data to IPFS right from VS
-                    Code by using nft.storage.
-                  </p>
-                  <div className="mt-auto">
-                    <a
-                      className="text-sky-500 hover:text-sky-600 inline-flex items-center"
-                      href="https://marketplace.visualstudio.com/items?itemName=1clickNFT.1clicknft"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      VSCode Marketplace
+                      GitHub Repositories
                       <svg
                         className="w-4 h-4 ml-2"
                         viewBox="0 0 24 24"
