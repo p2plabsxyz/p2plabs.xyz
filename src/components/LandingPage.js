@@ -79,8 +79,7 @@ function LandingPage() {
                 Projects
               </h1>
               <p className="sm:w-3/5 leading-relaxed text-base sm:pl-28 pl-0">
-                Use our services from the following links. Our software is
-                open-sourced. So you can read it, fork it, and improve it!
+                Our software is open-sourced. So you can read it, fork it, and improve it!
               </p>
             </div>
           </div>
@@ -137,10 +136,10 @@ function LandingPage() {
                 />
                 <div className="p-6 flex flex-col flex-grow">
                   <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
-                    P2P Projects
+                    P2P Software
                   </h1>
                   <p className="leading-relaxed mb-5">
-                    Explore our p2p open-source projects on GitHub.
+                    Explore our p2p open-source tools on GitHub.
                   </p>
                   <div className="mt-auto">
                     <a
@@ -149,7 +148,7 @@ function LandingPage() {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      GitHub Repositories
+                      Repositories
                       <svg
                         className="w-4 h-4 ml-2"
                         viewBox="0 0 24 24"
