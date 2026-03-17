@@ -130,12 +130,12 @@ function Footer() {
               </li>
               <li>
                 <a
-                  href="https://twitter.com/p2plabs_xyz"
+                  href="https://mastodon.social/@peersky"
                   className="text-gray-600 hover:text-gray-800 text-sm"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Twitter
+                  Mastodon
                 </a>
               </li>
             </nav>
