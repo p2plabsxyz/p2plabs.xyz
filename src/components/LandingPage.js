@@ -104,7 +104,7 @@ function LandingPage() {
                     Peersky Browser
                   </h1>
                   <p className="leading-relaxed mb-5">
-                    A Minimal Local-First P2P Web Browser: Access, Communicate, and Publish Offline
+                    A Local-First P2P Web Browser: Access, Communicate, and Publish Offline
                   </p>
                   <div className="mt-auto">
                     <a
