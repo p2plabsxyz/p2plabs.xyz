@@ -1,32 +1,55 @@
 name: CI
 
+# Every push or merge to main builds the site and puts it on the prod branch,
+# which GitHub Pages serves, then publishes it to Distributed Press.
 on:
   push:
     branches: [ main ]
   workflow_dispatch:
+
+# Pushing the build to the prod branch needs write access to the repository.
+permissions:
+  contents: write
+
+# One deploy at a time: a newer push waits for the one before it to finish,
+# so an older build never lands on top of a newer one.
+concurrency:
+  group: deploy
+  cancel-in-progress: false
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Check out the repository
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v7
 
-      # Step 2: Set up Node.js
-      - name: Set up Node.js 18
-        uses: actions/setup-node@v3
+      - name: Set up Node.js 24
+        uses: actions/setup-node@v7
         with:
-          node-version: 18
+          node-version: 24
+          cache: npm
 
-      # Step 3: Install dependencies and build the site
       - name: Install dependencies
         run: npm ci
 
+      - name: Test
+        run: npm test -- --watchAll=false
+
+      # Also writes a page for each route (scripts/static-routes.js), and
+      # public/CNAME goes along so GitHub Pages keeps the p2plabs.xyz domain.
       - name: Build the site
         run: npm run build
 
-      # Step 4: Deploy to Distributed Press
+      # Before Distributed Press, so the site still updates if publishing
+      # there fails. The prod branch is made if it is not there yet.
+      - name: Deploy to GitHub Pages (prod branch)
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: build
+          publish_branch: prod
+
       - name: Publish to Distributed Press
         uses: hyphacoop/actions-distributed-press@v1.1.0
         with:
@@ -37,11 +60,3 @@ jobs:
           deploy_http: true
           deploy_hyper: true
           deploy_ipfs: true
-
-      # Step 6: Deploy to GitHub Pages
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: build
-          publish_branch: prod
