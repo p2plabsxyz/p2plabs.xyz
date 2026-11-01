@@ -72,6 +72,16 @@ test("the careers page gets its own file in the build, so a link to it opens", (
   expect(routesIn(app)).toEqual(["careers"]);
 });
 
+test("the page loads no trackers: no script from another site, no Firebase or Google Analytics", () => {
+  const page = readFileSync(path.join(__dirname, "..", "public", "index.html"), "utf8");
+  expect(page).not.toMatch(/<script[^>]+src=["']?(https?:)?\/\//i);
+  expect(page).not.toMatch(/firebase|gtag|googletagmanager|google-analytics/i);
+  const { dependencies = {}, devDependencies = {} } = JSON.parse(
+    readFileSync(path.join(__dirname, "..", "package.json"), "utf8")
+  );
+  expect(Object.keys({ ...dependencies, ...devDependencies }).filter((name) => /firebase|analytics/i.test(name))).toEqual([]);
+});
+
 test("the globe is one mesh: every peer is linked, and a signal can reach any of them", () => {
   const { peers, links, neighbours } = makeGlobe();
   expect(peers.length).toBeGreaterThan(50);
