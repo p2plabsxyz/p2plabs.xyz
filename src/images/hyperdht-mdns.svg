@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+  <!-- Peers on one local network finding each other, drawn like the PeerSky
+       app logos: the brand blues with an ink outline. The dashed ring is the
+       network, which nothing outside it can join. -->
+  <defs>
+    <linearGradient id="peer" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#34acff"/>
+      <stop offset="1" stop-color="#1595ed"/>
+    </linearGradient>
+  </defs>
+  <circle cx="50" cy="50" r="44" fill="none" stroke="#0d0d0d" stroke-width="3" stroke-dasharray="5 6" stroke-linecap="round"/>
+  <g stroke="#0d0d0d" stroke-width="3.5" stroke-linecap="round">
+    <path d="M50 22 78 50 50 78 22 50Z" fill="#ecf6ff"/>
+    <path d="M50 22V78M22 50H78"/>
+  </g>
+  <g stroke="#0d0d0d" stroke-width="3" fill="url(#peer)">
+    <circle cx="50" cy="22" r="9.5"/>
+    <circle cx="78" cy="50" r="9.5"/>
+    <circle cx="50" cy="78" r="9.5"/>
+    <circle cx="22" cy="50" r="9.5"/>
+  </g>
+  <circle cx="50" cy="50" r="7" fill="#2778bf" stroke="#0d0d0d" stroke-width="3"/>
+</svg>
